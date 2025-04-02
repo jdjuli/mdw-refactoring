@@ -9,4 +9,12 @@ public class NewReleaseMovie extends Movie {
         this.frequentRenterPoints = 2;
     }
 
+    @Override
+    public int getFrequentRenterPoints(int daysRented) {
+        if (daysRented > this.daysRentedThreshold) {
+            return this.frequentRenterPoints;
+        } else {
+            return super.getFrequentRenterPoints(daysRented);
+        }
+    }
 }

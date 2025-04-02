@@ -9,4 +9,13 @@ public class ChildrenMovie extends Movie {
         this.daysRentedThreshold = 3;
     }
 
+    @Override
+    public double getCharge(int daysRented) {
+        double result = super.getCharge(daysRented);
+        if (daysRented > this.daysRentedThreshold) {
+            result += (daysRented - 1) * this.extraCharge;
+        }
+        return result;
+    }
+
 }

@@ -9,4 +9,13 @@ public class RegularMovie extends Movie {
         this.daysRentedThreshold = 2;
     }
 
+    @Override
+    public double getCharge(int daysRented) {
+        double result = super.getCharge(daysRented);
+        if (daysRented > this.daysRentedThreshold) {
+            result += (daysRented - this.daysRentedThreshold) * this.extraCharge;
+        }
+        return result;
+    }
+
 }
