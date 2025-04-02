@@ -5,7 +5,15 @@ public class Movie {
 	private String title;
 	
 	private Price price;
-	
+
+	protected int frequentRenterPoints;
+
+	protected double charge;
+
+	protected double extraCharge;
+
+	protected int daysRentedThreshold;
+
 	public Movie(String title, Price price) {
 		this.title = title;
 		this.price = price;
