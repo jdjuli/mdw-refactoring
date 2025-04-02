@@ -16,17 +16,17 @@ public class MovieBuilder {
 	}
 	
 	public MovieBuilder childrens() {
-		this.movie = new ChildrenMovie(this.title, new ChildrenPrice());
+		this.movie = new ChildrenMovie(this.title);
 		return this;
 	}
 	
 	public MovieBuilder regular() {
-		this.movie = new RegularMovie(this.title, new RegularPrice());
+		this.movie = new RegularMovie(this.title);
 		return this;
 	}
 	
 	public MovieBuilder newRelease() {
-		this.movie = new NewReleaseMovie(this.title, new NewReleasePrice());
+		this.movie = new NewReleaseMovie(this.title);
 		return this;
 	}
 	
