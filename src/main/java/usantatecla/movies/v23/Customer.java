@@ -30,7 +30,7 @@ public class Customer {
 		int totalFrecuentRenterPoints = 0;
 		while (rentals.hasNext()) {
 			Rental each = rentals.next();
-			result += "\t" + each.getMovie().getTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
+			result += "\t" + each.getMovieTitle() + "\t" + String.valueOf(each.getCharge()) + "\n";
 			totalCharge += each.getCharge();
 			totalFrecuentRenterPoints += each.getFrequentRenterPoints();
 		}
